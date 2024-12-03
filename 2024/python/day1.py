@@ -4,7 +4,7 @@ from functools import reduce
 DIR_2024 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def _parse_data(data: list[str]) -> tuple[tuple[int], tuple[int]]:
-  return zip(*[(int(line.strip().split("   ")[0]), int(line.strip().split("   ")[1])) for line in data])
+  return zip(*[(int(parts[0]), int(parts[1])) for line in data if (parts := line.strip().split("   "))])
 
 def part1(data: list[str]) -> int:
   l, r = _parse_data(data)
