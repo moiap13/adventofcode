@@ -6,7 +6,7 @@ from _decorators import timeit
 
 DIR_2024 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAY = 3
-MUL_REGEX = re.compile(r"mul\([0-9]{1,3},[0-9]{1,3}\)")
+MUL_REGEX = re.compile(r"mul\(([0-9]{1,3}),([0-9]{1,3})\)")
 NUM_REGEX = re.compile(r"\d{1,3}")
 DONT_REGEX = re.compile(r"don't\(\)")
 DO_REGEX = re.compile(r"do\(\)")
